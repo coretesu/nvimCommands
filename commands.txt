@@ -1,0 +1,104 @@
+
+
+commands {
+  * = search instances of the string cursor is on
+  
+  * + shft + n = iterate string instances (N is back)
+
+  c + i + w = Change in string ( . to repeat)
+
+  :%s/(string)/(change)/(+c)g = command for change word and global doc + c for permission
+ 
+  y = yank is copy
+
+  p = p is paste after cursor
+
+  P = is paste before cursor
+
+  v + i + w = Visual in word then p
+
+  :reg = see register
+
+  " + reg + p = append register
+
+  A = insert at the end of the line
+
+  I = insert first not whitespace
+
+  0 = to move cursor start of the line
+
+  g_ = last not white space ($) last of line
+
+  _ = first not whitespace line
+
+  x = delete over cursor
+
+  dG = delete everything after cursor
+
+  o = new line below and insert
+
+  O = new line above and insert
+
+  yy = yanks current line
+
+  3yy = To yank multiple lines in vim, type in the number of lines followed by yy. 
+  
+  y$ = Copy everything from the cursor to the end of the line
+  
+  y^ = Copy everything from the start of the line to the cursor.
+  
+  yiw = Copy the current word.
+
+  dd = deletes line
+
+  3dd = Cut 3 lines, starting from the cursor
+
+  d$ = Cut everything from the cursor to the end of the line
+
+  gg = Move the cursor at the beginning
+
+  V + G + y = Select all y then p
+
+  :%d = Clear all lines
+
+
+----------------- + yabai commands + -------------
+
+# change window focus within space
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+
+
+#change focus between external displays (left and right)
+alt - s: yabai -m display --focus west
+alt - g: yabai -m display --focus east
+
+
+
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+
+
+# flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+
+# flip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+
+# toggle window float
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+
+# maximize a window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+
+# balance out tree of windows (resize to occupy same area)
+shift + alt - e : yabai -m space --balance
+
+
